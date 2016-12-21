@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="ToxiproxySuite.ServerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToxiproxySuite"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Background="Azure" Width="435.431">
+    <UserControl.DataContext>
+        <local:ServerControlViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Label x:Name="label" Content="Server" HorizontalAlignment="Left" Margin="46,31,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="111,34,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="289"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="354" Margin="46,88,0,0"/>
+        <Label x:Name="label1" Content="Proxy Rules:" HorizontalAlignment="Left" Margin="46,57,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="AddProxy" Content="Add New Proxy" HorizontalAlignment="Left" Margin="46,234,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="ToggleProxyStatus" Content="{Binding CurrentProxyStatus}" HorizontalAlignment="Left" Margin="184,250,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="DeleteProxy" Content="Remove" HorizontalAlignment="Left" Margin="325,234,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</UserControl>

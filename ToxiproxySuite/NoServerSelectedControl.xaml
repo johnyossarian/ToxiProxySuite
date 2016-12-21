@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ToxiproxySuite.NoServerSelectedControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToxiproxySuite"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Background>
+        <SolidColorBrush Color="Azure"/>
+    </UserControl.Background>
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Please select a server to continue..." VerticalAlignment="Top" Height="95" Width="280"/>
+        <Button x:Name="AddNewServer" Content="AddNewServer" HorizontalAlignment="Left" Margin="105,110,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ElementName}=" CommandParameter="{x:Type local:ServerControl}"/>
+
+    </Grid>
+</UserControl>

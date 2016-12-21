@@ -1,0 +1,27 @@
+﻿<Window x:Class="ToxiproxySuite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToxiproxySuite"
+        mc:Ignorable="d"
+        Title="ToxiProxy Suite" Height="376.656" Width="651.325">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Header="Servers">
+            <WrapPanel>
+                <Button x:Name="AddNewServer" Content="Add" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="47" Command="{Binding AddServerCommand}"/>
+                <Button x:Name="RemoveServer" Content="Remove" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="47" Command="{Binding RemoveServerCommand}"/>
+                <TreeView x:Name="treeView" HorizontalAlignment="Left" Height="270" Margin="10,10,0,0" VerticalAlignment="Top" Width="129"/>
+            </WrapPanel>
+        </GroupBox>
+        <ContentControl Grid.Column="2" Content="{Binding CurrentView}" />
+        <ToolBar x:Name="toolBar" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
